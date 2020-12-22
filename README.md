@@ -1,3 +1,7 @@
+# For the live demo, please visit this link: https://saddle-oak-software-replicatio.herokuapp.com/
+
+This demo is a responsive replication of the Saddle Oak Software website, and it was created over the course of a handful of days. Given more time I'd take care of any remaining oddities, but I'd like for it to be an example of the kind of work I can produce.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
