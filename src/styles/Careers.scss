@@ -1,0 +1,55 @@
+@import '../styles/Shared.scss';
+
+@media (max-width: 768px) {
+	#career-details {
+		width: 90% !important;
+	}
+}
+
+#careers-content {
+	display: flex;
+	position: relative;
+	align-items: center;
+	flex-direction: column;
+	color: $saddleBlue;
+	width: 90%;
+	padding-top: 53px;
+	margin: auto;
+	margin-bottom: 160px;
+
+	& .solid-header {
+		margin-top: 70px;
+	}
+
+	& #career-details {
+		width: 60%;
+		font-size: 20px;
+		font-weight: 700;
+		word-spacing: 4px;
+		letter-spacing: 1px;
+
+		& p {
+			width: 100%;
+		}
+
+		& a {
+			color: inherit;
+			text-decoration: underline !important;
+		}
+	}
+
+	& h1 {
+		font-size: 30px;
+		letter-spacing: 3px;
+
+		a {
+			color: inherit;
+			text-decoration: underline !important;
+		}
+	}
+}
+
+#careers-background {
+	background-position: bottom;
+	height: 100%;
+}

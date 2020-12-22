@@ -1,0 +1,127 @@
+@import './Shared.scss';
+
+@media (max-width: 768px) {
+	#contact-us-container {
+		height: 200% !important;
+		flex-direction: column;
+
+		#contact-us-details,
+		#contact-us-form {
+			width: 100% !important;
+		}
+	}
+}
+
+#contact-us-container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+
+	& #contact-us-details {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		width: 50%;
+		height: 100%;
+		padding: 0 20px;
+		box-sizing: border-box;
+		font-family: "PT Sans", "Arial";
+		color: $saddleBlue;
+
+		& * {
+			margin: 0;
+			letter-spacing: 1px;
+		}
+
+		& > h1 {
+			margin-top: -50px;
+			margin-bottom: 30px;
+			font-weight: 300;
+			letter-spacing: 4px;
+		}
+
+		& p {
+			text-align: center;
+		}
+
+		& div:last-child {
+			width: 30px;
+			height: 1px;
+			border: 1px solid $saddleBlue;
+			background-color: $saddleBlue;
+			margin-top: 30px;
+		}
+
+		.contact-us-background {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			z-index: -1;
+			filter: opacity(0.5);
+		}
+	}
+
+	& #contact-us-form {
+		width: 50%;
+		height: 100%;
+		background-color: $saddleBlue;
+
+		& form {
+			display: flex;
+			position: relative;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			align-content: center;
+			width: 70%;
+			height: 100%;
+			margin: auto;
+		}
+
+		& input {
+			width: 46.5%;
+			height: 30px;
+			font-size: 14px;
+			font-weight: 500;
+		}
+
+		& textarea {
+			width: 100%;
+			height: 134px;
+			font-size: 14px;
+			font-weight: 500;
+		}
+
+		& button {
+			width: 100%;
+			height: 45px;
+			background-color: $mintGreen;
+			color: white;
+			border: 0;
+			margin: 1%;
+			font-family: "PT Sans", "Arial";
+		}
+
+		& input,
+		& textarea {
+			background-color: white;
+			border: 0;
+			resize: none;
+			color: $saddleBlue;
+			font-family: "PT Sans", "Arial";
+			margin: 1%;
+		}
+
+		& input::placeholder,
+		& textarea::placeholder {
+			color: $saddleBlue;
+		}
+
+		& form > input:last-of-type {
+			width: 100%;
+		}
+	}
+}

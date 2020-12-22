@@ -1,12 +1,39 @@
+import 'react-app-polyfill/ie9';
+import 'react-app-polyfill/stable';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './styles/index.css';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import AboutUs from './components/AboutUs';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Products from './components/Products';
+import Careers from './components/Careers';
+import ContactUs from './components/ContactUs';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+        <Route exact path="/about-us">
+          <AboutUs/>
+        </Route>
+        <Route exact path="/products">
+          <Products/>
+        </Route>
+        <Route exact path="/careers">
+          <Careers/>
+        </Route>
+        <Route exact path="/contact-us">
+          <ContactUs/>
+        </Route>
+      </Switch>
+      <Navbar/>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,0 +1,336 @@
+@import './Shared.scss';
+
+@media (max-width: 768px) {
+	.blue-separator {
+		& > div:first-child {
+			font-size: 1em !important;
+		}
+
+		& > div:last-child {
+			font-size: 1.2em !important;
+		}
+	}
+
+	#home-headline {
+		font-size: 2.5em !important;
+		.sub-header {
+			position: absolute;
+			right: 0;
+			transform: skewX(-10deg);
+		}
+	}
+
+	.section-previews {
+		flex-direction: column !important;
+		align-items: center !important;
+
+		.column-card {
+			width: 80% !important;
+			margin-bottom: 30px;
+		}
+	}
+
+	.achievement-card {
+		margin-bottom: 50px;
+	}
+
+	.achievement-icon {
+		width: 50% !important;
+		margin-top: 5%;
+	}
+
+	.achievement-details {
+		width: 50% !important;
+		.achievement-description {
+			width: 90% !important;
+		}
+	}
+}
+
+#home-image-container {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 500px;
+}
+
+#home-page-image {
+	width: 100%;
+	height: $home-page-image-height;
+	object-fit: cover;
+	object-position: 50% 35%;
+	filter: brightness(0.4) saturate(0.8) contrast(0.9);
+}
+
+#home-headline {
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 8.5em;
+	color: white;
+	font-family: 'Oswald', 'Arial';
+	font-size: 3.5em;
+	font-weight: 400;
+
+	hr {
+		height: 3px;
+		background: white;
+		margin-top: 6px;
+		margin-bottom: -4px;
+	}
+
+	.sub-header {
+		position: absolute;
+		right: 0;
+		transform: skewX(-10deg);
+	}
+}
+
+.lower-fold-sections {
+	position: absolute;
+	top: $home-page-image-height;
+	left: 0;
+	width: 100%;
+}
+
+.blue-separator {
+	display: flex;
+	position: relative;
+	width: 100%;
+	height: 153px;
+	background-color: $saddleBlue;
+	color: white;
+	font-family: 'Poppins', 'Arial';
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	& > div:first-child {
+		font-size: 1.5em;
+		width: fit-content;
+	}
+
+	& > div:last-child {
+		font-size: 2.5em;
+		width: fit-content;
+	}
+}
+
+.spaced-letters {
+	letter-spacing: 0.5vw;
+}
+
+.section-previews {
+	display: flex;
+	position: relative;
+	height: fit-content;
+	justify-content: space-between;
+	padding: 30px 0;
+	margin-bottom: 40px;
+
+	.column-card {
+		width: 23%;
+		padding: 0 30px;
+		background-color: $saddleBlue;
+		color: white;
+		text-align: center;
+	}
+
+	.column-card.light-card {
+		color: $saddleBlue;
+		background-color: $lightGray;
+	}
+
+	h4 {
+		margin-top: 20px;
+		font-size: 25px;
+		font-weight: 400;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: underline !important;
+	}
+}
+
+.why-we-are-different {
+	display: flex;
+	position: relative;
+	height: fit-content;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 30px 10%;
+	background-color: $saddleBlue;
+	color: white;
+	font-family: "Poppins", "Arial";
+	font-weight: 400;
+
+	h2 {
+		text-align: center;
+		font-size: 3em;
+		font-weight: 500;
+		letter-spacing: 2px;
+		margin-bottom: 50px;
+	}
+
+	.achievement-card {
+		display: flex;
+		height: 250px;
+		justify-content: center;
+	}
+
+	.achievement-card.achievement-card-reverse {
+		flex-direction: row-reverse;
+		text-align: right;
+
+		.achievement-icon svg {
+			left: 10px;
+			fill: $lightGray !important;
+		}
+
+		.achievement-icon svg:last-child {
+			transform: translate(50%, 50%);
+			fill: $saddleBlue !important;
+		}
+	}
+
+	.achievement-icon {
+		position: relative;
+		fill: $mintGreen;
+		stroke: $saddleBlue;
+		fill-opacity: 1;
+		width: 40%;
+		height: 100%;
+
+		svg {
+			position: absolute;
+			right: 10px;
+			height: 200;
+			width: 200;
+		}
+
+		svg:last-child {
+			fill: $saddleBlue !important;
+			stroke: $saddleBlue !important;
+			transform: translate(-50%, 50%);
+		}
+	}
+
+	.achievement-details {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-family: "Poppins", "Arial";
+		width: 40%;
+		padding: 0 0 0 10px;
+		text-align: center;
+
+		h4 {
+			font-size: 16px;
+			margin-top: 0;
+			font-weight: 600;
+			letter-spacing: 2px;
+		}
+
+		.achievement-description {
+			font-size: 15px;
+			width: 80%;
+			line-height: 1.5;
+			font-weight: 200;
+			font-family: "Raleway", "Poppins", "Arial";
+		}
+	}
+}
+
+.what-people-say {
+	height: fit-content;
+	padding: 30px 0;
+	background-color: $lightGray;
+	color: white;
+	font-family: "Poppins", "Arial";
+	font-weight: 400;
+
+	.review-previews {
+		justify-content: center;
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 3em;
+		font-weight: 500;
+		letter-spacing: 2px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.review-card {
+		position: relative;
+		padding: 0;
+		width: 28%;
+		height: 375px;
+		margin: 12px;
+
+		.card-image-container {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: 50% 35%;
+				opacity: 0.2;
+			}
+		}
+		.review-card-description {
+			width: 100%;
+			height: 100%;
+			background-color: rgb(4, 81, 132);
+
+			svg {
+				fill: $mintGreen;
+				transform: rotate(180deg) translateY(-260%);
+				width: 30px;
+			}
+
+			.review-content {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 80%;
+				transform: translate(-50%, -50%);
+				font-size: 15px;
+				font-family: "Raleway", "Poppins", "Arial";
+				font-weight: 300;
+				font-style: italic;
+				line-height: 2;
+			}
+
+			.review-signature {
+				position: absolute;
+				top: 80%;
+				left: 50%;
+				width: 90%;
+				transform: translate(-50%, -50%);
+				color: $mintGreen;
+				font-family: "Arial";
+
+				h5 {
+					font-size: 20px;
+					font-weight: 600;
+					margin: 0;
+				}
+
+				p {
+					font-weight: 600;
+					margin: 0;
+					font-style: italic;
+				}
+			}
+		}
+	}
+}
